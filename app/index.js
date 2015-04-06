@@ -46,7 +46,7 @@ var NgPackGenerator = yeoman.generators.Base.extend({
       var name = _.deburr(props.moduleName);
 
       this.moduleName = _.kebabCase(name);
-      this.moduleNameCamelCase = _.capitalize(_.camelCase(name));
+      this.moduleNameCamelCase = _.camelCase(name);
       this.moduleDesc = _.deburr(props.moduleDesc);
       this.moduleAuthor = _.deburr(props.moduleAuthor);
       this.moduleLicense = _.deburr(props.moduleLicense);

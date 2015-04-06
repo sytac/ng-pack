@@ -5,7 +5,7 @@ Helps you to create and publish your [Angular](http://angularjs.org/) components
 - [Livereload](https://www.npmjs.com/package/gulp-livereload)
 - [SASS](https://www.npmjs.com/package/gulp-sass)
 - Ready to publish [bower.json](http://bower.io/docs/creating-packages/#bowerjson).
-- Fully testing environment: [Karma](http://karma-runner.github.io/) + [Protractor](http://angular.github.io/protractor) + [Istanbul](https://github.com/gotwarlost/istanbul)
+- Complete testing environment: [Karma](http://karma-runner.github.io/) + [Protractor](http://angular.github.io/protractor) + [Istanbul](https://github.com/gotwarlost/istanbul)
 - [Travis CI](https://travis-ci.org) & [Coveralls](https://coveralls.io/) integration
 
 ## Getting Started

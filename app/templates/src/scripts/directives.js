@@ -5,7 +5,7 @@
     .module('<%= moduleNameCamelCase %>.directives', [
       '<%= moduleNameCamelCase %>.controllers'
     ])
-    .directive('TestDirective', [
+    .directive('testDirective', [
       function() {
         return {
           restrict: 'E',
