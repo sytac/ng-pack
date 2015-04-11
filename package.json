@@ -1,6 +1,6 @@
 {
   "name": "generator-ng-pack",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Helps you to create and publish your Angular components quickly using Gulp",
   "keywords": [
     "yeoman-generator",
@@ -18,9 +18,9 @@
     "yeoman-generator": ">=0.18.0 <0.18.9",
     "yosay": "^1.0.1"
   },
-  "homepage": "http://github.com/tameraydin/generator-ng-pack",
+  "homepage": "http://github.com/tameraydin/ng-pack",
   "bugs": {
-    "url": "https://github.com/tameraydin/generator-ng-pack/issues"
+    "url": "https://github.com/tameraydin/ng-pack/issues"
   },
   "author": "Tamer Aydin (http://tamerayd.in)",
   "contributors": [{
@@ -30,6 +30,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/tameraydin/generator-ng-pack.git"
+    "url": "git://github.com/tameraydin/ng-pack.git"
   }
 }
