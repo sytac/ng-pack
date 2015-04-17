@@ -102,7 +102,7 @@ var NgPackGenerator = yeoman.generators.Base.extend({
 
   end: function() {
     this.log(yosay(
-      'Almost done! Need help? Check out ' + chalk.red('http://github.com/tameraydin/ng-pack')
+      'Almost done! Need help? Check out ' + chalk.red('http://github.com/sytac/ng-pack')
     ));
 
     this.installDependencies({

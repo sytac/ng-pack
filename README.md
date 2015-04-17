@@ -1,7 +1,7 @@
 # ng-pack
 Helps you to create and publish your [Angular](http://angularjs.org/) components quickly using [Gulp](http://gulpjs.com/).
 
-- [Gulpfile](http://github.com/tameraydin/ng-pack/blob/master/app/templates/_gulpfile.js) with tasks to watch, test & build.
+- [Gulpfile](http://github.com/sytac/ng-pack/blob/master/app/templates/_gulpfile.js) with tasks to watch, test & build.
 - [Livereload](https://www.npmjs.com/package/gulp-livereload)
 - [SASS](https://www.npmjs.com/package/gulp-sass)
 - Ready to publish [bower.json](http://bower.io/docs/creating-packages/#bowerjson).
@@ -36,4 +36,4 @@ yo ng-pack
 
 ## License
 
-MIT [http://tameraydin.mit-license.org/](http://tameraydin.mit-license.org/)
+MIT
