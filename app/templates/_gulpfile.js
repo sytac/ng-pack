@@ -9,6 +9,7 @@ var header = require('gulp-header');
 var sass = require('gulp-sass');
 var livereload = require('gulp-livereload');
 var webpack = require('gulp-webpack');
+var wait = require('gulp-wait');
 var protractor = require('gulp-protractor').protractor;
 var del = require('del');
 var runSequence = require('run-sequence');
@@ -56,6 +57,7 @@ gulp.task('jshint', function() {
   return gulp.src(SOURCE.SCRIPTS + '*.js')
     .pipe(jshint(jshintConfig))
     .pipe(jshint.reporter(stylish))
+    .pipe(wait(1000))
     .pipe(livereload());
 });
 
@@ -63,6 +65,7 @@ gulp.task('sass', function() {
   return gulp.src(SOURCE.STYLES + '*.scss')
     .pipe(sass()).on('error', handleErr)
     .pipe(gulp.dest(PATH.DIST))
+    .pipe(wait(500))
     .pipe(livereload());
 });
 
