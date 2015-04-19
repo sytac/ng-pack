@@ -1,6 +1,6 @@
 {
   "name": "generator-ng-pack",
-  "version": "0.2.3",
+  "version": "0.2.0",
   "description": "Helps you to create and publish your Angular components quickly using Gulp",
   "keywords": [
     "yeoman-generator",
