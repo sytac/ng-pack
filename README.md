@@ -2,6 +2,7 @@
 Helps you to create and publish your [Angular](http://angularjs.org/) components quickly using [Gulp](http://gulpjs.com/).
 
 - [Gulpfile](http://github.com/sytac/ng-pack/blob/master/app/templates/_gulpfile.js) with tasks to watch, test & build.
+- [ES6](https://babeljs.io/docs/learn-es6/) support via [Babel](https://babeljs.io/)
 - [Livereload](https://www.npmjs.com/package/gulp-livereload)
 - [SASS](https://www.npmjs.com/package/gulp-sass)
 - Ready to publish [bower.json](http://bower.io/docs/creating-packages/#bowerjson).

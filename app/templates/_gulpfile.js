@@ -1,13 +1,15 @@
 var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
+var babel = require('gulp-babel');
 var minifyCSS = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var header = require('gulp-header');
 var sass = require('gulp-sass');
 var livereload = require('gulp-livereload');
-var protractor = require("gulp-protractor").protractor;
+var webpack = require('gulp-webpack');
+var protractor = require('gulp-protractor').protractor;
 var del = require('del');
 var runSequence = require('run-sequence');
 var stylish = require('jshint-stylish');
@@ -30,6 +32,7 @@ var BANNER = [
 var PATH = {
   SOURCE: './src/',
   TEST: './test/',
+  DEMO: './demo/',
   DIST: './dist/'
 };
 
@@ -63,10 +66,11 @@ gulp.task('sass', function() {
     .pipe(livereload());
 });
 
-gulp.task('concat', function() {
+gulp.task('convert-and-concat', function() {
   return gulp.src([
       SOURCE.SCRIPTS + '*.js'
     ])
+    .pipe(babel())
     .pipe(concat(pkg.name + '.js'))
     .pipe(gulp.dest(PATH.DIST));
 });
@@ -99,12 +103,28 @@ gulp.task('banner', function() {
     .pipe(gulp.dest(PATH.DIST));
 });
 
-gulp.task('watch', ['server'], function() {
+gulp.task('webpack', function() {
+  return gulp.src(SOURCE.SCRIPTS + '*.js')
+    .pipe(webpack({
+      output: {
+        path: __dirname + PATH.DEMO.substr(1),
+        filename: 'bundle.js'
+      },
+      module: {
+        loaders: [{
+          loader: 'babel-loader'
+        }]
+      }
+    }))
+    .pipe(gulp.dest(PATH.DEMO));
+});
+
+gulp.task('watch', ['server', 'webpack'], function() {
   livereload.listen({
     basePath: './',
     reloadPage: 'demo/index.html'
   });
-  gulp.watch(SOURCE.SCRIPTS + '*.js', ['jshint']);
+  gulp.watch(SOURCE.SCRIPTS + '*.js', ['jshint', 'webpack']);
   gulp.watch(SOURCE.STYLES + '*.scss', ['sass']);
 });
 
@@ -146,7 +166,7 @@ gulp.task('test-e2e', ['server'], function() {
 gulp.task('build', ['clean'], function(cb) {
   runSequence(
     'sass',
-    'concat',
+    'convert-and-concat',
     'uglify',
     'minify',
     'banner',

@@ -5,7 +5,8 @@
     .module('<%= moduleNameCamelCase %>.controllers', [])
     .controller('TestController', ['$scope',
       function($scope) {
-        $scope.message = 'Hello world!';
+        let message = 'Hello world!';
+        $scope.message = message;
       }
     ]);
 

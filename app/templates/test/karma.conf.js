@@ -43,7 +43,7 @@ module.exports = function(config) {
     reporters: ['progress', 'coverage'],
 
     preprocessors: {
-      'src/scripts/*.js': ['coverage']
+      'src/scripts/*.js': ['coverage', 'babel']
     },
 
     coverageReporter: {
@@ -56,7 +56,8 @@ module.exports = function(config) {
     plugins: [
       'karma-phantomjs-launcher',
       'karma-jasmine',
-      'karma-coverage'
+      'karma-coverage',
+      'karma-babel-preprocessor'
     ],
 
     // Continuous Integration mode
