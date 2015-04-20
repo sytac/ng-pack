@@ -23,6 +23,8 @@ Initialize the generator:
 yo ng-pack
 ```
 
+Also a [Slush](http://slushjs.github.io/) generator is available, please check [sytac/slush-ng-pack](https://github.com/sytac/slush-ng-pack) for it.
+
 ## Usage
 1. Setup your E2E testing environment for once: ``npm install -g protractor && webdriver-manager update --standalone``
 2. Run ``gulp watch``, go to [http://localhost:8080/demo/index.html](http://localhost:8080/demo/index.html) and play on **/src**.
